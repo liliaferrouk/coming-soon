@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Josefin Sans", sans-serif;
+    min-height: 100vh;
+    color: hsl(0, 6%, 24%);
+    background: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+main{
+    max-width: 500px;
+    margin: auto;
+}
+#logo{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 100px;
+    display: block;
+}
+#hero{
+    width: 100%;
+    margin-top: 30px;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.6rem;
+    letter-spacing: 10px;
+}
+.pink-h1{
+    margin-top: 60px;
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+.text{
+    color: hsl(0, 36%, 70%);
+    font-size: 0.87rem;
+    text-align: center;
+    padding: 16px 30px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.input-mail{
+    border-radius: 30px;
+    width: 82%;
+    margin: auto;
+    margin-bottom: 90px;
+}
+#input-m{
+    border: 0.7px solid hsl(0, 36%, 70%);
+    background-color: transparent;
+    height: 45px;
+    width: 100%;
+    border-radius: 30px ;
+    padding-left: 25px;
+    padding-right: 33%;
+    position: relative;
+}
+#input-m:focus{
+    border: 0.7px solid hsl(0, 36%, 70%);
+}
+#input-m::placeholder {
+    color: #e5d2d3; 
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+}
+#button{
+    width: 20%;
+    height: 45px;
+    border-radius: 30px;
+    background: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 6px hsl(0, 74%, 74%);
+    position: relative;
+    top: -45px;
+    left: 80%;
+}
+#button:hover{
+    cursor: pointer;
+}
+#error-icon{
+    position: relative;
+    top: -78px;
+    left: 69%;
+}
+.erreur-message{
+    padding-left: 20px;
+    color: hsl(0, 93%, 68%);
+    font-size: 0.8rem;
+    position: relative;
+    top: -65px;
+}
+
+.attribution { font-size: 11px; text-align: right; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 500px) and (max-width:900px) {
+    main{
+        margin-top: 80px;
+    }
+}
+
+@media screen and (min-width:850px) {
+    /* TODO:  */
 }

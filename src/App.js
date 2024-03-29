@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from './Footer';
+import MainDesktop from './MainDesktop';
+import MainMobile from './MainMobile';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [isDesktop,setIsDesktop] = useState(true);
+  useEffect(()=>{
+    const checkIsDestop = ()=>{
+      setIsDesktop(window.innerWidth >= 850);
+    }
+    checkIsDestop();
+    window.addEventListener('resize', checkIsDestop);
+
+    //cleaning:
+    return ()=>{
+      window.removeEventListener('resize',checkIsDestop);
+    }
+
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isDesktop ? <MainDesktop/> :<MainMobile/>}
+      <Footer/>
     </div>
   );
 }
