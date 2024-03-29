@@ -110,6 +110,47 @@ h1{
     }
 }
 
-@media screen and (min-width:850px) {
-    /* TODO:  */
+@media screen and (min-width:1060px) {
+    main{
+        max-width: none;
+        width: 100%;
+        margin: 0;
+        display: flex;
+    }
+    #hero-img{
+        width: 42.5%;
+        size: cover;
+    }
+    #logo{
+        width: 140px;
+        margin-bottom: 120px;
+    }
+    h1{
+        text-align: left;
+        font-size: 3.7rem;
+        letter-spacing: 13px;
+        font-weight: 600;
+        padding-left: 30px;
+    }
+    .pink-h1{
+        font-weight: 300;
+    }
+    .left-part{
+        padding: 25px 115px;
+        padding-bottom: 0px;
+    }
+    .input-mail{
+        margin-bottom: 0;
+    }
+    .text{
+        text-align: left;
+        padding: 20px 30px;
+        line-height: 24px;
+        padding-right: 16%;
+    }
+    .input-mail{
+        margin: 0;
+        margin-left: 30px;
+        width: 78%;
+    }
 }

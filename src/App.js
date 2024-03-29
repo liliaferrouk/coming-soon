@@ -7,7 +7,7 @@ function App() {
   const [isDesktop,setIsDesktop] = useState(true);
   useEffect(()=>{
     const checkIsDestop = ()=>{
-      setIsDesktop(window.innerWidth >= 850);
+      setIsDesktop(window.innerWidth >= 1060);
     }
     checkIsDestop();
     window.addEventListener('resize', checkIsDestop);
@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       {isDesktop ? <MainDesktop/> :<MainMobile/>}
-      <Footer/>
+      {!isDesktop && <Footer/>}
     </div>
   );
 }
