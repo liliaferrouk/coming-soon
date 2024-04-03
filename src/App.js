@@ -1,4 +1,3 @@
-import Footer from './Footer';
 import MainDesktop from './MainDesktop';
 import MainMobile from './MainMobile';
 import { useEffect, useState } from 'react';
@@ -18,10 +17,25 @@ function App() {
     }
 
   },[])
+  const [erreur,setErreur] = useState(false);
+  const [email,setEmail] = useState("");
   return (
     <div className="App">
-      {isDesktop ? <MainDesktop/> :<MainMobile/>}
-      {!isDesktop && <Footer/>}
+      { isDesktop
+        ? <MainDesktop
+              erreur={erreur}
+              setErreur={setErreur}
+              email={email}
+              setEmail={setEmail}
+          />
+        :<MainMobile
+              erreur={erreur}
+              setErreur={setErreur}
+              email={email}
+              setEmail={setEmail}
+         />
+      }
+      {/* {!isDesktop && <Footer/>} */}
     </div>
   );
 }

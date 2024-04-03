@@ -103,8 +103,11 @@ h1{
 
 .attribution { font-size: 11px; text-align: right; }
 .attribution a { color: hsl(228, 45%, 44%); }
+footer{
+    padding: 0.5rem;
+}
 
-@media screen and (min-width: 500px) and (max-width:900px) {
+@media screen and (min-width: 750px) and (max-width:900px) {
     main{
         margin-top: 80px;
     }
